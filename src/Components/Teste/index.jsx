@@ -4,6 +4,7 @@ import api from '../../api/api'
 const Teste = (props) => {
     const [dados, setDados] = useState([])
     const [isLoaded, setIsLoaded] = useState(false)
+    const [clicked, setClicked] = useState(false)
     const urlCliente = "http://localhost:3050/clientes/dados"
     const postUrl = "http://localhost:3050/clientes/dados/novoCliente"
     const delUrl = "http://localhost:3050/clientes/dados/delete/"
@@ -27,38 +28,42 @@ const Teste = (props) => {
                 setIsLoaded(true)
             })
 
-    }, [])
+    }, [clicked])
 
     const post = () =>{
         api(postUrl, 'POST', body)
             .then((result) => {
                 console.log(result)
+                setClicked(!clicked)
             })
     }
     const deletar = () =>{
-        api(delUrl+"20", 'DELETE')
+        const id = prompt("digite id: ")
+        api(delUrl+id, 'DELETE')
             .then((result) => {
                 console.log(result)
+                setClicked(!clicked)
             })
     }
 
     return (
         <>
-            <h1>Dados dos Clientes</h1>
-            {isLoaded &&
-                dados.map((cliente)=>{
-                    return (
-                        <div key={cliente.ID} style={{border: "solid", margin:"20px"}}>
-                            <p>Nome: {cliente.NOME}</p>
-                            <p>Idade: {cliente.IDADE}</p>
-                            <p>Genero: {cliente.GENERO}</p>
-                            <p>Endereço: {cliente.RUA}, {cliente.NUMERO}</p>
-                        </div>
-                    )
-                })                
-            }
-            <button onClick={post}>Postar</button>
-            <button onClick={deletar}>Deletar</button>
+        <h1>Dados dos Clientes</h1>
+        {isLoaded &&
+            dados.map((cliente)=>{
+                return (
+                    <div key={cliente.ID} style={{border: "solid", margin:"20px"}}>
+                        <p>ID: {cliente.ID}</p>
+                        <p>Nome: {cliente.NOME}</p>
+                        <p>Idade: {cliente.IDADE}</p>
+                        <p>Genero: {cliente.GENERO}</p>
+                        <p>Endereço: {cliente.RUA}, {cliente.NUMERO}</p>
+                    </div>
+                )
+            })
+        }
+        <button onClick={post}>Postar</button>
+        <button onClick={deletar}>Deletar</button>
         </>
     );
 }

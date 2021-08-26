@@ -11,7 +11,7 @@ const api = async (url, method, body) =>{
 
     const data = await fetch(url,init)
     const result = data.json()
-    return result   
+    return result
 }
 
 export default api
