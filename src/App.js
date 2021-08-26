@@ -7,6 +7,7 @@ function App() {
       <Formulario>
 
       </Formulario>
+      
     </div>
   );
 }
