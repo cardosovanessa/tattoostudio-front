@@ -1,14 +1,22 @@
 import React from "react";
+import { 
+  BrowserRouter as Router,
+  Switch,
+  Route
+ } from 'react-router-dom'
 import Teste from "./Components/Teste";
-import Forms from "./Components/Teste/forms";
+import Contato from "./Components/Contato";
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
-      <Teste />
-      <Forms disable={true}></Forms>
-      <Forms disable={false}></Forms>
+      <Router>
+        <h1>MAFIA TATTOO STUDIO</h1>
+        <Switch>
+          <Route exact path="/contato/*"><Contato/></Route>
+          <Route exact path="/teste/"><Teste/></Route>
+        </Switch>
+      </Router>
     </>
   );
 }
