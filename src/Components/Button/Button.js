@@ -1,18 +1,14 @@
 import { Component } from "react";
 
 
-
-
-
-class DeletarButton extends Component{
+class Button extends Component{
     render(){
         return(
             <div>
-                <button>Deletar</button>
+                <button>{this.props.children}</button>
             </div>
         )
     }
 }
 
-
-export default DeletarButton
+export default Button
