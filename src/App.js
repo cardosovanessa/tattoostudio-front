@@ -6,6 +6,7 @@ import {
  } from 'react-router-dom'
 import Teste from "./Components/Teste";
 import Contato from "./Components/Contato";
+import Forms from "./Components/Teste/forms";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route exact path="/contato/*"><Contato/></Route>
           <Route exact path="/teste/"><Teste/></Route>
+          <Route exact path="/forms"><Forms/></Route>
         </Switch>
       </Router>
     </>

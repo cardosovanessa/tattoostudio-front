@@ -1,8 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { handlerDelete } from '../../handler/handler';
 
 const CardContato = (props) => {
-    const { cliente } = props
+    const { cliente, setEnviado } = props
+
+    const deletarCliente = ()=>{
+        handlerDelete(cliente.ID)
+        .then(()=>{
+            alert(`Cliente ${cliente.NOME} deletado com sucesso`)
+        })
+    }
 
     return ( 
     <>
@@ -14,15 +22,20 @@ const CardContato = (props) => {
         <p><strong>Nome:</strong> {cliente.NOME}</p>
         <p><strong>Idade:</strong> {cliente.IDADE}</p>
         <p><strong>Genero:</strong> {cliente.GENERO}</p>
+        <p><strong>Telefone:</strong> {cliente.TELEFONE}</p>
         <p><strong>Endereço:</strong> {cliente.RUA}, {cliente.NUMERO} </p>
         <p><strong>Tatuador:</strong> {cliente.TATUADOR}</p>
 
         <Link to={`/contato/atualizar/${cliente.ID}`}>
-            <input type="submit" value="Atualizar" />
+            <input type="submit" value="Atualizar" onClick={()=>{setEnviado && setEnviado(false)}} />
         </Link>
-        <Link to="dados">
-            <input type="submit" value="Deletar" onClick={e=>{this.DeleteClient(e)}} />
+        <Link to="/">
+            <input type="submit" value="Deletar" onClick={deletarCliente} />
         </Link>
+        <Link to="/">
+            <input type="submit" value="Voltar para Home" />
+        </Link>
+
     </> 
     );
 }

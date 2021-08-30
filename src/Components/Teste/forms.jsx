@@ -1,18 +1,24 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
+
 
 const Forms = (props) => {
-    const {disable} = props
+    const {disable, preValues} = props
+    const { register, handleSubmit } = useForm({
+        defaultValues: preValues
+    })
 
-    const onClick = (event)=>{
-        event.preventDefault()
+    const onSubmit = (data)=> {
+        console.log(data)
     }
 
     return (
-        <form onSubmit={onClick}>
-            <input type="text" name="Nome" disabled={disable}/>
-            <input type="text" name="telefone" disabled={disable}/>
-            <input type="text" name="email" disabled={disable}/>
-            <select name="tatuador" onChange={(e)=>{console.log(e.target.value)}} defaultValue="tatuadores">
+        <form onSubmit={handleSubmit(onSubmit)}>
+            {console.log(preValues)}
+            <input type="text" placeholder="NOME" disabled={disable} {...register("NOME")} />
+            <input type="text" {...register("IDADE")} disabled={disable}  />
+            <input type="text" {...register("RUA")} disabled={disable}  />
+            <select name="tatuador" onChange={(e)=>{console.log(e.target.value)}} defaultValue="tatuadores"  >
                 <option value="tatuadores" disabled>Tatuadores</option>
                 <option>Zé</option>
                 <option>Joao Fulgencio</option>
