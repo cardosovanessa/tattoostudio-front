@@ -2,6 +2,7 @@ import Header from './Components/Header/Header';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
+import Portfolio from './Components/Portfolio/Portfolio';
 
 function App() {
   return (
@@ -11,6 +12,10 @@ function App() {
 
         <Switch>
           <Route path="/" component={Home} exact />
+        </Switch>
+
+        <Switch>
+          <Route path="/Portfolio" component={Portfolio} exact />
         </Switch>
         
       <Footer />
