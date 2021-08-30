@@ -1,0 +1,10 @@
+.footer {  
+  background: black;
+  height: 40px;  
+  display: grid;
+  grid-template-rows: 2fr;
+  text-align: center; 
+  color: #ebeb00;
+  font-weight: 700;
+}
+
