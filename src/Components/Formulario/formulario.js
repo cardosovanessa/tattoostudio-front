@@ -24,7 +24,7 @@ class Formulario extends Component{
                             <input type="text" name="numero" placeholder="Número"></input>
                         </div>
                     <div><input type="text" name="cidade" placeholder="Cidade"></input></div>
-                    <div><input type="text" name="etado" placeholder="Estado"></input></div>
+                    <div><input type="text" name="estado" placeholder="Estado"></input></div>
                     <div><select name="tatuador" placeholder="Tatuador">
                         <option disabled selected>Tatuadores</option>
                         <option>Zé</option>
