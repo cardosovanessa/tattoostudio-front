@@ -1,8 +1,7 @@
 import Header from './Components/Header/Header';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-// import Footer from './Components/Footer/Footer';
+import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
-import Branches from './Components/Branches/Branches';
 
 function App() {
   return (
@@ -12,9 +11,9 @@ function App() {
 
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/branches" component={Branches} exact />
         </Switch>
-
+        
+      <Footer />
       </BrowserRouter>
     </div>
   );
