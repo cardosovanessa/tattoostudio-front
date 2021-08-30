@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { 
   BrowserRouter as Router,
@@ -8,12 +7,15 @@ import {
 import Teste from "./Components/Teste";
 import Contato from "./Components/Contato";
 import Forms from "./Components/Teste/forms";
+import Button from "./Components/Button/Button";
 
 function App() {
   return (
     <>
       <Router>
         <h1>MAFIA TATTOO STUDIO</h1>
+        <Button>Atualizar</Button>
+        <Button>Deletar</Button>
         <Switch>
           <Route exact path="/contato/*"><Contato/></Route>
           <Route exact path="/teste/"><Teste/></Route>
