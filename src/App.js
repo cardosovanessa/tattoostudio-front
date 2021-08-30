@@ -14,8 +14,6 @@ function App() {
     <>
       <Router>
         <h1>MAFIA TATTOO STUDIO</h1>
-        <Button>Atualizar</Button>
-        <Button>Deletar</Button>
         <Switch>
           <Route exact path="/contato/*"><Contato/></Route>
           <Route exact path="/teste/"><Teste/></Route>
