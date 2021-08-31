@@ -40,8 +40,7 @@ function App() {
     </div>*/
     <div>
       
-      <Formulario></Formulario>
-      <Footer/>
+      <Button>Olá</Button>
     </div>
     
   );
