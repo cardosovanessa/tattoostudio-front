@@ -1,12 +1,11 @@
-body{
-  text-align: center;
-  background-color: rgb(53, 50, 50);
-}
-
 .input:nth-child(1):checked ~ .div .ul{--selected-item: 0;}
 .input:nth-child(2):checked ~ .div .ul{--selected-item: 1;}
 .input:nth-child(3):checked ~ .div .ul{--selected-item: 2;}
 .input:nth-child(4):checked ~ .div .ul{--selected-item: 3;}
+
+.main{
+  text-align: center;
+}
 
 .div{
   overflow: hidden;

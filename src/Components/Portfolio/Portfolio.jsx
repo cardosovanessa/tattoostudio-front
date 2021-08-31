@@ -1,10 +1,12 @@
 import React from "react";
 import style from "./Portfolio.module.css";
+import Busca from "../Busca";
 
 
 const Portfolio = () => {
-    return (
-        <main>
+    return (<>
+        <Busca />
+        <main className={style.main}>
             <input type="radio" className={style.input} name="slide" />
             <input type="radio" className={style.input} name="slide" />
             <input type="radio" className={style.input} name="slide" />
@@ -27,6 +29,7 @@ const Portfolio = () => {
                 </ul>
             </div>
         </main>
+        </>
     )
 }
 

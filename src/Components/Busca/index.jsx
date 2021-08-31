@@ -1,31 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../api/api';
 import CardBusca from '../CardBusca';
-import Portfolio from '../Portfolio/Portfolio';
+import Alert from '../Alert';
+import { BuscaDiv } from '../Busca/styled';
 const urlPortfolio = "https://estudiotattooapi-portfolio.herokuapp.com/portfolio/tag/"
 
-const Busca = (props) => {
+const Busca = () => {
     const [search, setSearch] = useState("");
     const [portfolios, setPortfolios] = useState([])
     const [isLoaded, setIsLoaded] = useState(false)
+    const [showAlert, setShowAlert] = useState(false)
 
     const onSubmit = (e)=>{
         e.preventDefault()
+        setShowAlert(false)
         api(urlPortfolio+search, 'GET')
         .then((resp)=>{
             setPortfolios(resp.result)
-            setIsLoaded(true)
+            if(resp.result)
+                setIsLoaded(true)
+            else
+                setShowAlert(true)
         })
     }
     
     return (
-    <>
-        <form onSubmit={onSubmit}>
-            <input type="search" onChange={(e)=>{setSearch(e.target.value)}} name="pesquisa" />
-        </form>
-        {
-            isLoaded && <CardBusca portfolio={portfolios} />
-        }
+    <>  
+        <BuscaDiv>
+            <form onSubmit={onSubmit}>
+                <label>Busca: </label>
+                <input type="search" placeholder="Digite o tema da tatuagem"
+                onChange={(e)=>{setSearch(e.target.value)}} name="pesquisa" />
+            </form>
+                <Alert show={showAlert}>Tema não encontrado</Alert>
+            {
+                isLoaded && <CardBusca portfolio={portfolios} />
+            }
+        </BuscaDiv>
+        
     </>);
 }
  
