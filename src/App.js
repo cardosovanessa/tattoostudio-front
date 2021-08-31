@@ -10,6 +10,7 @@ import Forms from "./Components/Teste/forms";
 import Home from "./Components/Home/Home"
 import Header from "./Components/Header/Header"
 import Footer from "./Components/Footer/Footer"
+import Portfolio from "./Components/Portfolio/Portfolio"
 
 function App() {
   return (
@@ -21,10 +22,12 @@ function App() {
           <Route exact path="/Cadastro/*"><Contato/></Route>
           <Route exact path="/teste/"><Teste/></Route>
           <Route exact path="/forms"><Forms/></Route>
+          <Route path="/Portfolio" component={Portfolio} exact />
         </Switch>
         <Footer />
       </Router>
     </>
+
   );
 }
 
