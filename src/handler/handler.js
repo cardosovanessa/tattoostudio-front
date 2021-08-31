@@ -1,9 +1,9 @@
 import api from '../api/api'
 
-const getUrl = "http://localhost:3050/clientes/dados/"
-const postUrl = "http://localhost:3050/clientes/dados/novoCliente"
-const delUrl = "http://localhost:3050/clientes/dados/delete/"
-const putUrl = "http://localhost:3050/clientes/dados/edit/"
+const getUrl = "https://api-studio-tattoo-clients.herokuapp.com/clientes/dados/"
+const postUrl = "https://api-studio-tattoo-clients.herokuapp.com/clientes/dados/novoCliente"
+const delUrl = "https://api-studio-tattoo-clients.herokuapp.com/clientes/dados/delete/"
+const putUrl = "https://api-studio-tattoo-clients.herokuapp.com/clientes/dados/edit/"
 
 
 export const handlerForms  = (cliente)=>{
