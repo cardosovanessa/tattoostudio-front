@@ -17,7 +17,7 @@ const Contato = () => {
     return ( 
     <>
         <Switch>
-            <Route exact path="/contato/">
+            <Route exact path="/Cadastro/">
             {
                 enviado ?
                 <CardContato cliente={cliente}/>
@@ -25,7 +25,7 @@ const Contato = () => {
                 getClient = {getClient} />
             }
             </Route>
-            <Route exact path={`/contato/atualizar/:id`}>
+            <Route exact path={`/Cadastro/atualizar/:id`}>
                 <Atualizar />
             </Route>
         </Switch>

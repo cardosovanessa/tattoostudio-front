@@ -16,7 +16,7 @@ const Atualizar = () => {
             setCliente(result)
             setIsLoaded(true)
         })
-    },[enviado])
+    },[id,enviado])
     
     const updateClient = async ()=>{
         setEnviado(true)
