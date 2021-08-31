@@ -41,18 +41,18 @@ const Formulario = ({getClient, updateClient, atualizar, clienteAnterior}) => {
                         <input type="radio" {...register("GENERO")} value="Feminino"></input>
                         <label>Feminino</label></div>
                     </div>
-                <div>
+                <div className={style.debug}>
                     <input type="text" {...register("TELEFONE")} placeholder="Telefone" />
                     <input type="text" {...register("RUA")} placeholder="Endereço" />
                     <input type="text" {...register("NUMERO")} placeholder="Número" />
                 </div>
-                <div>
+                <div className={style.debug}>
                     <input type="text" {...register("CIDADE")} placeholder="Cidade" />
                 </div>
-                <div>
+                <div className={style.debug}>
                     <input type="text" {...register("ESTADO")} placeholder="Estado" />
                 </div>
-                <div>
+                <div className={style.debug}>
                 <select {...register("TATUADOR")} defaultValue="tatuadores" >
                     <option value="tatuadores" disabled>Tatuadores</option>
                     <option>Zé</option>

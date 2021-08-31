@@ -1,16 +1,16 @@
-<<<<<<< HEAD
+
 import React from "react";
-import { 
-  BrowserRouter as Router,
-  Switch,
-  Route
- } from 'react-router-dom'
 import Teste from "./Components/Teste";
 import Contato from "./Components/Contato";
 import Forms from "./Components/Teste/forms";
 import Button from "./Components/Button/Button";
+import Header from './Components/Header/Header';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Footer from './Components/Footer/Footer';
+import Home from './Components/Home/Home';
+import Formulario from "./Components/Formulario/Formulario";
 
-function App() {
+/*function App() {
   return (
     <>
       <Router>
@@ -22,15 +22,12 @@ function App() {
         </Switch>
       </Router>
     </>
-=======
-import Header from './Components/Header/Header';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Footer from './Components/Footer/Footer';
-import Home from './Components/Home/Home';
+  )}*/
+
 
 function App() {
   return (
-    <div>
+    /*<div>
       <BrowserRouter>
         <Header />
 
@@ -40,8 +37,13 @@ function App() {
         
       <Footer />
       </BrowserRouter>
+    </div>*/
+    <div>
+      
+      <Formulario></Formulario>
+      <Footer/>
     </div>
->>>>>>> 268e90bb3a82dbbe3c0762332120ebbe09f6b815
+    
   );
 }
 
