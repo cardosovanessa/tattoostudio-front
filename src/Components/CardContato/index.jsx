@@ -6,10 +6,13 @@ const CardContato = (props) => {
     const { cliente, setEnviado } = props
 
     const deletarCliente = ()=>{
-        handlerDelete(cliente.ID)
-        .then(()=>{
-            alert(`Cliente ${cliente.NOME} deletado com sucesso`)
-        })
+        if(window.confirm("Deseja excluir seu contato?")){
+            handlerDelete(cliente.ID)
+            .then(()=>{
+                alert(`Cliente ${cliente.NOME} deletado com sucesso`)
+            })
+        }
+        
     }
 
     return ( 
@@ -26,7 +29,7 @@ const CardContato = (props) => {
         <p><strong>Endereço:</strong> {cliente.RUA}, {cliente.NUMERO} </p>
         <p><strong>Tatuador:</strong> {cliente.TATUADOR}</p>
 
-        <Link to={`/contato/atualizar/${cliente.ID}`}>
+        <Link to={`/Cadastro/atualizar/${cliente.ID}`}>
             <input type="submit" value="Atualizar" onClick={()=>{setEnviado && setEnviado(false)}} />
         </Link>
         <Link to="/">
