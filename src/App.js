@@ -9,6 +9,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import Formulario from "./Components/Formulario/Formulario";
+import Atualizar from "./Components/Atualizar";
+import CardContato from "./Components/CardContato";
 
 /*function App() {
   return (
@@ -40,7 +42,12 @@ function App() {
     </div>*/
     <div>
       
-      <Button>Olá</Button>
+      <BrowserRouter>
+      <Header></Header>
+      <Atualizar></Atualizar>
+      </BrowserRouter>
+      <Footer></Footer>
+      
     </div>
     
   );

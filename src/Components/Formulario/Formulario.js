@@ -23,6 +23,7 @@ const Formulario = ({getClient, updateClient, atualizar, clienteAnterior}) => {
     }
 
     return (
+        <div className={style.pai}>
         <form onSubmit={handleSubmit(onSubmit)}>
             <fieldset>
                 {
@@ -66,6 +67,7 @@ const Formulario = ({getClient, updateClient, atualizar, clienteAnterior}) => {
                 }                          
             </fieldset>
         </form>
+        </div>
     )
 }
 

@@ -5,18 +5,18 @@ import Formulario from '../Formulario/Formulario';
 import CardContato from '../CardContato';
 
 const Atualizar = () => {
-    const { id } = useParams()
+    /*const { id } = useParams()*/
     const [ cliente, setCliente] = useState({})
     const [ isLoaded, setIsLoaded ] = useState(false)
-    const [enviado, setEnviado] = useState(false)
+    const [enviado, setEnviado] = useState(true)
 
-    useEffect(()=>{
+    /*useEffect(()=>{
         handlerCompleteForms(id)
         .then(result=>{
             setCliente(result)
             setIsLoaded(true)
         })
-    },[enviado])
+    },[enviado])*/
     
     const updateClient = async ()=>{
         setEnviado(true)
