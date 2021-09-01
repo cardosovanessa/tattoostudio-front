@@ -1,12 +1,20 @@
 body{
   text-align: center;
   background-color: rgb(53, 50, 50);
+  color: white;
 }
 
-.input:nth-child(1):checked ~ .div .ul{--selected-item: 0;}
-.input:nth-child(2):checked ~ .div .ul{--selected-item: 1;}
-.input:nth-child(3):checked ~ .div .ul{--selected-item: 2;}
-.input:nth-child(4):checked ~ .div .ul{--selected-item: 3;}
+.input:nth-child(0):checked ~ .div .ul{--selected-item: 0;}
+.input:nth-child(1):checked ~ .div .ul{--selected-item: 1;}
+.input:nth-child(2):checked ~ .div .ul{--selected-item: 2;}
+.input:nth-child(3):checked ~ .div .ul{--selected-item: 3;}
+.input:nth-child(4):checked ~ .div .ul{--selected-item: 4;}
+.input:nth-child(5):checked ~ .div .ul{--selected-item: 5;}
+
+input[type="radio" i] {
+  cursor: pointer;
+  overflow: scroll;
+}
 
 .div{
   overflow: hidden;
@@ -14,14 +22,14 @@ body{
 
 .ul{
   --selected-item: 0;
-  --total-items: 4;
+  --total-items: 6;
   list-style-type: none;
-  margin: 10px 0;
+  margin: 10px;
   padding: 0;
   position: relative;
   left: calc(var(--selected-item) * -100%);
   width: calc(var(--total-items) * 100%);
-  transition: left 1s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  transition: left 1s;
   
   display: grid;
   grid-auto-flow: column;
@@ -29,10 +37,12 @@ body{
 }
 
 .img {
-  width: 800px;
-  height: 500px;
+  width: 400px;
+  height: 450px;
   border-radius: 4px;
+  box-shadow: 10px 1px 5px black;
 }
+
 .li{
   width: 100%;
 }

@@ -9,3 +9,11 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+//Renderizar
+/*const spinner = document.getElementById('spinner');
+
+if (spinner && !spinner.hasAttribute('hidden')) {
+  spinner.setAttribute('hidden', 'true')
+}
+*/

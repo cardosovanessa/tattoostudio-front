@@ -6,20 +6,24 @@ import Portfolio from './Components/Portfolio/Portfolio';
 
 function App() {
   return (
+
     <div>
+
       <BrowserRouter>
+
         <Header />
 
         <Switch>
-          <Route path="/" component={Home} exact />
+          <Route path="/Home" component={Home} exact />
         </Switch>
 
         <Switch>
           <Route path="/Portfolio" component={Portfolio} exact />
         </Switch>
-        
-      <Footer />
+
+        <Footer />
       </BrowserRouter>
+
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import style from "./Home.module.css";
 
 const Home = () => {
+  
   return (
     <main className={style.main}>
       <div className={style.home} id={style.img}>Mafia's Tattoo Studio</div>
