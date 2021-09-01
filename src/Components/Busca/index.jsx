@@ -3,7 +3,8 @@ import api from '../../api/api';
 import CardBusca from '../CardBusca';
 import Alert from '../Alert';
 import { BuscaDiv } from '../Busca/styled';
-const urlPortfolio = "https://estudiotattooapi-portfolio.herokuapp.com/portfolio/tag/"
+// const urlPortfolio = "https://estudiotattooapi-portfolio.herokuapp.com/portfolio/tag/"
+const urlPortfolio = "http://localhost:3003/portfolio/tag/"
 
 const Busca = () => {
     const [search, setSearch] = useState("");
@@ -16,6 +17,7 @@ const Busca = () => {
         setShowAlert(false)
         api(urlPortfolio+search, 'GET')
         .then((resp)=>{
+            console.log(resp)
             setPortfolios(resp.result)
             if(resp.result)
                 setIsLoaded(true)
@@ -33,9 +35,13 @@ const Busca = () => {
                 onChange={(e)=>{setSearch(e.target.value)}} name="pesquisa" />
             </form>
                 <Alert show={showAlert}>Tema não encontrado</Alert>
-            {
-                isLoaded && <CardBusca portfolio={portfolios} />
-            }
+            <div className="cards">
+                {
+                    isLoaded && portfolios.map((portfolio)=>{
+                        return <CardBusca portfolio={portfolio} />
+                    })
+                }
+            </div>
         </BuscaDiv>
         
     </>);
