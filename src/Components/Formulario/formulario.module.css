@@ -89,7 +89,7 @@ select{
 .pai{
 	background-color: #000000;
 	background-image: url("https://img.freepik.com/free-vector/vintage-flash-tattoos-designs-seamless-pattern_225004-1539.jpg?size=338&ext=jpg");
-	min-height: 91vh;
+	min-height: 90vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
