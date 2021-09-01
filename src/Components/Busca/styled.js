@@ -26,6 +26,8 @@ export const BuscaDiv = styled.div`
     }
     .cards{
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-left: 300px
     }
 `

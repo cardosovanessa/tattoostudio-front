@@ -3,8 +3,7 @@ import api from '../../api/api';
 import CardBusca from '../CardBusca';
 import Alert from '../Alert';
 import { BuscaDiv } from '../Busca/styled';
-// const urlPortfolio = "https://estudiotattooapi-portfolio.herokuapp.com/portfolio/tag/"
-const urlPortfolio = "http://localhost:3003/portfolio/tag/"
+const urlPortfolio = "https://estudiotattooapi-portfolio.herokuapp.com/portfolio/tag/"
 
 const Busca = () => {
     const [search, setSearch] = useState("");
