@@ -1,24 +1,24 @@
-.butao{
+.butao {
   min-width: 80px;  
-   max-width: 3000px; 
-  margin-top:35px;
-  font-family:Arial;
-  width:6%;
-  height:6%;
+  max-width: 3000px; 
+  margin-top: 35px;
+  font-family: Arial;
+  width: 6%;
+  height: 6%;
   border-width:2%;
   color:#161806;
   border-color:#9e9787;
-  font-weight:bold;
-  border-top-left-radius:15px;
-  border-top-right-radius:15px;
-  border-bottom-left-radius:15px;
-  border-bottom-right-radius:15px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   box-shadow: 0px 1px 0px 0px #1c1b18;
-  text-shadow: 0px 1px 0px #ffffff;
-  background:linear-gradient(#eae0c2, #48433F);
+  text-shadow: 0px 1px 0px #fff;
+  background:linear-gradient(#fff, #48433F);
 }
 
 .butao:hover {
-    background: linear-gradient(#ccc2a6, #eae0c2);
-    color: #000;
+  background: linear-gradient(#fff, #48433F);
+  color: #000;
 }

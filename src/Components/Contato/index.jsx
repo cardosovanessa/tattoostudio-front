@@ -6,31 +6,31 @@ import CardContato from '../CardContato';
 import Formulario from '../Formulario/Formulario';
 
 const Contato = () => {
-    const [ enviado, setEnviado] = useState(false)
-    const [ cliente, setCliente] = useState({})
-    
-    const getClient = async (novoCliente) =>{
-        setCliente(await novoCliente)
-        setEnviado(true)
-    }
+	const [ enviado, setEnviado] = useState(false)
+	const [ cliente, setCliente] = useState({})
+	
+	const getClient = async (novoCliente) =>{
+		setCliente(await novoCliente)
+		setEnviado(true)
+	}
 
-    return ( 
-    <>
-        <Switch>
-            <Route exact path="/Cadastro/">
-            {
-                enviado ?
-                <CardContato cliente={cliente}/>
-                : <Formulario
-                getClient = {getClient} />
-            }
-            </Route>
-            <Route exact path={`/Cadastro/atualizar/:id`}>
-                <Atualizar />
-            </Route>
-        </Switch>
-        
-    </> );
+	return ( 
+	<>
+		<Switch>
+			<Route exact path="/Cadastro/">
+			{
+				enviado ?
+				<CardContato cliente={cliente}/>
+				: <Formulario
+				getClient = {getClient} />
+			}
+			</Route>
+			<Route exact path={`/Cadastro/atualizar/:id`}>
+				<Atualizar />
+			</Route>
+		</Switch>
+    </> 
+	);
 }
  
 export default Contato;
