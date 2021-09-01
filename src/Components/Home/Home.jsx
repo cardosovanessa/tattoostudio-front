@@ -18,7 +18,6 @@ const Home = () => {
 
   return (
     <main className={style.main}>
-      {console.log(dados)};
       <div className={style.home} id={style.img}>Mafia's Tattoo Studio</div>
       <div className={style.home} id={style.middle}>
         
@@ -37,19 +36,43 @@ const Home = () => {
         </div>
       </div>       
 
-      <div className={style.home} id={style.img3}>Filiais</div>
+      <div className={style.home} id={style.img3}>Nossas unidades</div>
         <div className={style.home} id={style.bottom}>
-          
-          <div className={style.filiais} id={style.studio1}> 
-            <h2 className={style.address}>pipipi</h2> 
-          </div>
 
           <div className={style.filiais} id={style.studio2}>
-            <h2 className={style.address}>{dados[1]?.RUA+" " + dados[1]?.NUMERO}</h2> 
+            <h2 className={style.address}> {console.log(dados)}
+              {`Unidade ${dados[0]?.UNIDADE}`}<br />
+              {`${dados[0]?.RUA + ' '}`}
+              {`, ${dados[0]?.NUMERO}`}
+              {` - ${dados[0]?.BAIRRO}`}<br />
+              {`${dados[0]?.CIDADE}`}
+              {` - ${dados[0]?.ESTADO}`}<br />
+              {`${dados[0]?.TELEFONE}`}
+            </h2> 
           </div>
-            
+
+          <div className={style.filiais} id={style.studio1}> 
+            <h2 className={style.address}>
+              {`Unidade ${dados[1]?.UNIDADE}`}<br />
+              {`${dados[1]?.RUA + ' '}`}
+              {`, ${dados[1]?.NUMERO}`}
+              {` - ${dados[1]?.BAIRRO}`}<br />
+              {`${dados[1]?.CIDADE}`}
+              {` - ${dados[1]?.ESTADO}`}<br />
+              {`${dados[1]?.TELEFONE}`}
+            </h2>           
+          </div>
+ 
           <div className={style.filiais} id={style.studio3}>
-            <h2 className={style.address}>pipipi</h2> 
+            <h2 className={style.address}>
+              {`Unidade ${dados[2]?.UNIDADE}`}<br />
+              {`${dados[2]?.RUA + ' '}`}
+              {`, ${dados[2]?.NUMERO}`}
+              {` - ${dados[2]?.BAIRRO}`}<br />
+              {`${dados[2]?.CIDADE}`}
+              {` - ${dados[2]?.ESTADO}`}<br />
+              {`${dados[2]?.TELEFONE}`}
+            </h2>           
           </div>
   
       </div>
