@@ -5,7 +5,7 @@ import Busca from "../Busca"
 const Portfolio = () => {
 
   return (
-    <main>
+    <main className={style.main}>
       <Busca />
       <input type="radio" className={style.input} name="slide" />
       <input type="radio" className={style.input} name="slide" />

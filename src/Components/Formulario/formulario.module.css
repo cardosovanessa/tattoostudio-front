@@ -1,19 +1,38 @@
+
+.debug{
+	background-color: #000000;
+	background-image: inherit;
+}
 form{
     width: 96%;
     max-width: 600px;
 	margin:30px auto; 
 	text-align: center;
+	background-color: #000000;
+
 }
 
 form fieldset{
 	padding: 20px 40px;
-	border:1px solid #ccc;
+	border:1px solid #FB130C;
+	border-radius: 5px;
+	background-color: #000000;
+}
+form fieldset h1{
+	border: 2px solid #ccc;
+	border-radius: 15px;
+	padding: -1%;
+	margin-left: 10%;
+	margin-right: 10%;
+	color: #FFD000;
 }
 
 form legend{
 	text-align: center;
 	font-size: 17px;
 	color:#FAA000;
+	background-color: #000000;
+	background-image: inherit;
 }
 
 form input[type=text]{
@@ -30,7 +49,9 @@ form input[type=number]{
 	margin-top:30px;
 	width: 80%;
 	padding: 10px 13px;
-	border:1px solid #ccc
+	border:1px solid #ccc;
+	background-color: white;
+	
 }
 select{
     font-family: tahoma;
@@ -44,14 +65,33 @@ select{
 .flexBase{
     flex: 1;
     width: 50%;
+	background-color: #000000;
+	background-image: inherit;
+}
+.flexBase p{
+	color: #FFD000;
+}
+.flexBase label{
+	color: #FFD000;
 }
 
 .genero{
     display: flex;
     align-items: center;
     padding: 0 7%;
+	background-color: #000000;
+	background-image: inherit;
+}
+.first{
+	background-color: #000000;
+	background-image: inherit;
+}
+.pai{
+	background-color: #000000;
+	background-image: url("https://img.freepik.com/free-vector/vintage-flash-tattoos-designs-seamless-pattern_225004-1539.jpg?size=338&ext=jpg");
+	min-height: 91vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.first{
-    
-}

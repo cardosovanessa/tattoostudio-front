@@ -35,3 +35,7 @@ body {
 .li {
   width: 100%;
 }
+
+.main{
+  min-height: 91vh;
+}

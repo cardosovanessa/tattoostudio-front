@@ -7,6 +7,7 @@ export const BuscaDiv = styled.div`
     flex-direction: column;
     width: 60vw;
     form{
+        background-color: transparent;
         display: flex;
         align-items: center;
         width: 100%;
