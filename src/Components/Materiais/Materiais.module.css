@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home {
+    height: 33%;
+    width: 100%;
+}
+
+#img {
+    margin: 40px;  
+    width: 90%;
+    height: 450px;
+    background-image: url('../../assets/img/materiais.jpg');    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#middle {
+    display: flex;
+    height: 500px;
+}
+
+#textp {
+    margin: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffeb;
+    font-weight: bold;
+    padding: 3%;
+    font-size: 35px;
+  }
+
+#text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px; 
+    width: 50%;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffeb;
+    padding: 3%;
+    font-size: 15px;
+    text-align: center;
+}
+
+#texts {
+    margin: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffeb;
+    font-weight: bold;
+    padding: 3%;
+    font-size: 25px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3px 3px;
+    grid-auto-flow: row;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      "Teste1 Teste1 Teste1"
+      "Teste2 Teste2 Teste2";
+    width: 300px;
+    height: 300px;
+}
+
+.Teste1 { 
+    grid-area: Teste1; 
+}
+  
+.Teste2 { 
+    grid-area: Teste2; 
+}
+
+#img2 {
+    margin: 10px;  
+    width: 100px;
+    height: 100px;
+    background-image: url('../../assets/img/materiais.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+  }
+  
