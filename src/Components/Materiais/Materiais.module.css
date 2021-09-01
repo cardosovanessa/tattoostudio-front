@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 90vh;
+}
+
+.home {
+    height: 33%;
+    width: 100%;
+}
+
+#img {
+    margin: 40px;  
+    width: 90%;
+    height: 450px;
+    background-image: url('../../assets/img/materiais.jpg');    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#middle {
+    display: flex;
+    height: 500px;
+}
+
+#textp {
+    margin: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffeb;
+    font-weight: bold;
+    padding: 3%;
+    font-size: 35px;
+  }
+
+#text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px; 
+    width: 50%;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffeb;
+    padding: 3%;
+    font-size: 15px;
+    text-align: center;
+}
+
+#texts {
+    margin: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffeb;
+    font-weight: bold;
+    padding: 3%;
+    font-size: 25px;
+}
+
+#bottom {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+  }
+  
+.mat {
+    width: 20%;
+    height: 250px;
+    margin: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 15px;  
+    font-weight: bold;
+}
+  
+#agulha {
+    background-image: url('../../assets/img/agulha.jpg');
+    border-radius: 10px;
+}
+  
+#luva {
+    background-image: url('../../assets/img/luva.jpg');
+    border-radius: 10px;
+}
+  
+#maquina {
+    background-image: url('../../assets/img/maquina.jpg');
+    border-radius: 10px;
+}
+
+#cartucho {
+    background-image: url('../../assets/img/cartucho.jpg');
+    border-radius: 10px;
+}
+
+#biqueira {
+    background-image: url('../../assets/img/biqueira.jpg');
+    border-radius: 10px;
+}
+  
+.materiais {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 20px; 
+    height: 100%;
+    width: 100%;
+    color: #fff;
+}
+  
+.materiais:hover {
+    opacity: initial;
+}
+  
+#agulha:hover, #luva:hover, #maquina:hover, #cartucho:hover, #biqueira:hover {
+    background: none;
+}
