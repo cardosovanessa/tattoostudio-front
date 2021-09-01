@@ -3,10 +3,10 @@
 ![Logo](https://static.wixstatic.com/media/af86ec_5850213055aa4ae8a4ecd4195d65d08d~mv2.png/v1/fill/w_154,h_22,al_c,q_85,usm_0.66_1.00_0.01/logo.webp) </h1>
 
 <p align="center">
-  <a href="#sobre">Sobre</a> •
-  <a href="#pré-requisitos">Pré-Requisitos</a> • 
-  <a href="#rodando-o-back-end-servidor">Rodando Backend</a> • 
-  <a href="#tecnologias">Tecnologias</a> •  
+ <a href="#sobre">Sobre</a> •
+ <a href="#pré-requisitos">Pré-Requisitos</a> • 
+ <a href="#rodando-o-back-end-servidor">Rodando Backend</a> • 
+ <a href="#tecnologias">Tecnologias</a> •  
   <a href="#autoria">Autoria</a>
 </p>
 
