@@ -3,10 +3,17 @@ body {
   background-color: #1a1a1a;
 }
 
-.input:nth-child(1):checked ~ .div .ul{--selected-item: 0;}
-.input:nth-child(2):checked ~ .div .ul{--selected-item: 1;}
-.input:nth-child(3):checked ~ .div .ul{--selected-item: 2;}
-.input:nth-child(4):checked ~ .div .ul{--selected-item: 3;}
+.input:nth-child(3):checked ~ .div .ul{--selected-item: 0;}
+.input:nth-child(4):checked ~ .div .ul{--selected-item: 1;}
+.input:nth-child(5):checked ~ .div .ul{--selected-item: 2;}
+.input:nth-child(6):checked ~ .div .ul{--selected-item: 3;}
+.input:nth-child(7):checked ~ .div .ul{--selected-item: 4;}
+.input:nth-child(8):checked ~ .div .ul{--selected-item: 5;}
+
+input[type="radio" i] {
+  cursor: pointer;
+  overflow: scroll;
+}
 
 .div {
   overflow: hidden;
@@ -14,9 +21,9 @@ body {
 
 .ul {
   --selected-item: 0;
-  --total-items: 4;
+  --total-items: 6;
   list-style-type: none;
-  margin: 10px 0;
+  margin: 10px;
   padding: 0;
   position: relative;
   left: calc(var(--selected-item) * -100%);
@@ -38,4 +45,8 @@ body {
 
 .main{
   min-height: 91vh;
+}
+
+.title{
+  color: #fff;
 }
