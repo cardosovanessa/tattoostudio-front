@@ -17,16 +17,24 @@ const Materiais = () => {
                 Conheça os materiais utilizados na Máfia's Tattoo.
             </div> 
             <div className={style.home} id={style.bottom}>
-                <div className={style.filiais} id={style.studio1}> 
-                    <h2 className={style.address}>pipipi</h2> 
+                <div className={style.mat} id={style.agulha}> 
+                    <h2 className={style.materiais}>Agulhas</h2> 
                 </div>
 
-                <div className={style.filiais} id={style.studio2}>
-                    <h2 className={style.address}>pipipi</h2> 
+                <div className={style.mat} id={style.luva}>
+                    <h2 className={style.materiais}>Luvas Descartáveis</h2> 
                 </div>
         
-                <div className={style.filiais} id={style.studio3}>
-                    <h2 className={style.address}>pipipi</h2> 
+                <div className={style.mat} id={style.maquina}>
+                    <h2 className={style.materiais}>Máquina</h2> 
+                </div>
+
+                <div className={style.mat} id={style.cartucho}>
+                    <h2 className={style.materiais}>Cartucho</h2> 
+                </div>
+
+                <div className={style.mat} id={style.biqueira}>
+                    <h2 className={style.materiais}>Biqueira Descartável</h2> 
                 </div>
             </div>
         </main>
