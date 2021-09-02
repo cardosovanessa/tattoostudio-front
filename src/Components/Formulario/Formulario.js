@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from './formulario.module.css';
 import Cliente from '../../Model/Cliente';
+import Alert from '../Alert'
 import { handlerForms, handlerUpdate } from '../../handler/handler';
 import { useForm } from 'react-hook-form';
 
@@ -8,17 +9,31 @@ const Formulario = ({ getClient, updateClient, atualizar, clienteAnterior, setIs
 	const { register, handleSubmit } = useForm({
 		defaultValues : clienteAnterior
 	})
+	const [alert, setAlert] = useState(false);
+	const [msgErro, setMsgErro] = useState("");
     
 	const onSubmit = async (data) => {
-		const cliente = new Cliente(data)
-		if(atualizar){
-			handlerUpdate(clienteAnterior.ID , cliente)
-			.then(()=>{
-				updateClient(clienteAnterior.ID)
-			})
-		} else {
-			setIsLoaded(false)
-			getClient(await handlerForms(cliente)) 
+		setAlert(false)
+		setMsgErro("")
+		if(!data.NOME || !data.TELEFONE){
+			setAlert(true)
+			return;
+		}
+		try{
+			const cliente = new Cliente(data)
+			if(atualizar){
+				handlerUpdate(clienteAnterior.ID , cliente)
+				.then(()=>{
+					updateClient(clienteAnterior.ID)
+				})
+			} else {
+				setIsLoaded(false)
+				getClient(await handlerForms(cliente)) 
+			}
+		}
+		catch(e){
+			setMsgErro(e.message)
+			return
 		}
 	}
 
@@ -31,7 +46,7 @@ const Formulario = ({ getClient, updateClient, atualizar, clienteAnterior, setIs
 				}
 				<h1>Cadastro para contato</h1>
 				<div className={style.first}>
-					<input type="text" {...register("NOME")} placeholder="Seu Nome" />
+					<input type="text" {...register("NOME")} placeholder="* Seu Nome" />
 				</div>
 
 					<div className={style.genero} >
@@ -45,8 +60,8 @@ const Formulario = ({ getClient, updateClient, atualizar, clienteAnterior, setIs
 						</div>
 
 						<div className={style.debug}>
-							<input type="text" {...register("TELEFONE")} placeholder="Telefone" />
-							<input type="text" {...register("RUA")} placeholder="Endereço" />
+							<input type="text" {...register("TELEFONE")} placeholder="* DDD + Telefone (Só numeros)" />
+							<input type="text" {...register("RUA")} placeholder="Rua" />
 							<input type="text" {...register("NUMERO")} placeholder="Número" />
 						</div>
 
@@ -70,6 +85,8 @@ const Formulario = ({ getClient, updateClient, atualizar, clienteAnterior, setIs
 						atualizar ? <input type="submit" value="Atualizar" />
 						: <input type="submit" value="Enviar"  /> 
 					}                          
+				<Alert show={alert}>Por favor, preencha os campos obrigatórios (*)</Alert>
+				<Alert show={msgErro}>{msgErro}</Alert>
 				</fieldset>
 			</form>
 		</div>
