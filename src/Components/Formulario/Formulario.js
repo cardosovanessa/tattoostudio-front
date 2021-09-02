@@ -15,7 +15,7 @@ const Formulario = ({ getClient, updateClient, atualizar, clienteAnterior, setIs
 	const onSubmit = async (data) => {
 		setAlert(false)
 		setMsgErro("")
-		if(!data.NOME || !data.TELEFONE){
+		if(!data.NOME || !data.TELEFONE || !data.IDADE){
 			setAlert(true)
 			return;
 		}
@@ -50,7 +50,7 @@ const Formulario = ({ getClient, updateClient, atualizar, clienteAnterior, setIs
 				</div>
 
 					<div className={style.genero} >
-						<input className={style.flexBase} type="number" {...register("IDADE")} placeholder="Idade"/>
+						<input className={style.flexBase} type="number" {...register("IDADE")} placeholder="* Idade"/>
 						<div className={style.flexBase}>
 							<p>Gênero</p>
 							<input type="radio" {...register("GENERO")} value="Masculino"></input>
@@ -60,7 +60,7 @@ const Formulario = ({ getClient, updateClient, atualizar, clienteAnterior, setIs
 						</div>
 
 						<div className={style.debug}>
-							<input type="text" {...register("TELEFONE")} placeholder="* DDD + Telefone (Só numeros)" />
+							<input type="text" {...register("TELEFONE")} placeholder="* (DDD) 0000-0000" />
 							<input type="text" {...register("RUA")} placeholder="Rua" />
 							<input type="text" {...register("NUMERO")} placeholder="Número" />
 						</div>

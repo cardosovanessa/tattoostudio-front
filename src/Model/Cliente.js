@@ -3,7 +3,7 @@ import moment from "moment";
 class Cliente {
 	constructor(cliente){
 		this.NOME = this._validate(cliente.NOME, /^[a-zA-Z ]+$/, "Nome contem caracteres incorretos")
-		this.IDADE = cliente.IDADE
+		this.IDADE = this._checkAge(cliente.IDADE)
 		this.GENERO = cliente.GENERO
 		this.RUA = cliente.RUA
 		this.NUMERO = cliente.NUMERO
@@ -19,6 +19,13 @@ class Cliente {
 			return text
 		else
 			throw new Error(errorMsg)
+	}
+
+	_checkAge(age){
+		if(age < 18)
+			throw new Error("Você precisa ser maior de 18 anos")
+		else
+		return age
 	}
 
 }
