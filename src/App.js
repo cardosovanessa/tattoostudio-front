@@ -11,7 +11,6 @@ import Footer from "./Components/Footer/Footer"
 import Portfolio from "./Components/Portfolio/Portfolio"
 import Materiais from './Components/Materiais/Materiais';
 
-
 function App() {
   return (
     <>
