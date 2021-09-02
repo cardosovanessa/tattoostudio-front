@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { handlerCompleteForms } from '../../handler/handler';
 import Formulario from '../Formulario/Formulario';
 import CardContato from '../CardContato';
+import Loading from '../Loading';
 
 const Atualizar = () => {
 	const { id } = useParams ()
@@ -22,12 +23,14 @@ const Atualizar = () => {
 		setEnviado(true)
 	}
 
-	return ( 
-		<>  
-			{enviado ?  (<><CardContato cliente={cliente} setEnviado={setEnviado} /> </>)  
-			: isLoaded && <Formulario clienteAnterior={cliente} updateClient={updateClient} atualizar />}
-		</> 
-	);
+    return ( 
+        <>  
+            {enviado ?  (<><CardContato cliente={cliente} setEnviado={setEnviado} /> </>)  
+            : isLoaded ? <Formulario clienteAnterior={cliente} updateClient={updateClient} atualizar />
+                       : <Loading />
+            }
+        </> 
+     );
 }
  
 export default Atualizar;

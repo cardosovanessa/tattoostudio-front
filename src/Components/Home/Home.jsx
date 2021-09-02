@@ -1,6 +1,7 @@
 import api from '../../api/api';
 import React, { useEffect, useState } from 'react';
 import style from './Home.module.css';
+import Loading from '../Loading';
 
 const Home = () => {
   const [ dados, setDados ] = useState([]);
@@ -12,9 +13,9 @@ const Home = () => {
     })
   }, [])
 
-  // if (!dados){
-  // return (<div></div>)
-  // }
+  if (!dados[0]){
+  return (<Loading/>)
+  }
 
   return (
     <main className={style.main}>

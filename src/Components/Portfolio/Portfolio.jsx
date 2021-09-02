@@ -15,12 +15,12 @@ const Portfolio = () => {
 
             <Busca />
             
-            <input type="radio" className={style.input} name="slide" />
-            <input type="radio" className={style.input} name="slide" />
-            <input type="radio" className={style.input} name="slide" />
-            <input type="radio" className={style.input} name="slide" />
-            <input type="radio" className={style.input} name="slide" />
-            <input type="radio" className={style.input} name="slide" />
+            <input type="radio" className={`${style.input} ${style.radio}`} name="slide" />
+            <input type="radio" className={`${style.input} ${style.radio}`} name="slide" />
+            <input type="radio" className={`${style.input} ${style.radio}`} name="slide" />
+            <input type="radio" className={`${style.input} ${style.radio}`} name="slide" />
+            <input type="radio" className={`${style.input} ${style.radio}`} name="slide" />
+            <input type="radio" className={`${style.input} ${style.radio}`} name="slide" />
 
             <div className={style.div} >
                 <ul className={style.ul} >

@@ -4,7 +4,7 @@ import Cliente from '../../Model/Cliente';
 import { handlerForms, handlerUpdate } from '../../handler/handler';
 import { useForm } from 'react-hook-form';
 
-const Formulario = ({ getClient, updateClient, atualizar, clienteAnterior }) => {
+const Formulario = ({ getClient, updateClient, atualizar, clienteAnterior, setIsLoaded }) => {
 	const { register, handleSubmit } = useForm({
 		defaultValues : clienteAnterior
 	})
@@ -17,6 +17,7 @@ const Formulario = ({ getClient, updateClient, atualizar, clienteAnterior }) => 
 				updateClient(clienteAnterior.ID)
 			})
 		} else {
+			setIsLoaded(false)
 			getClient(await handlerForms(cliente)) 
 		}
 	}
