@@ -24,7 +24,7 @@ Antes de começar, você precisa ter instalado em sua máquina as seguintes ferr
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
 ---
-### Rodando o Back End (servidor) 
+### Rodando o projeto localmente (servidor) 
 
 ```bash
 # Clone este repositório
@@ -33,14 +33,11 @@ $ git clone <https://github.com/cardosovanessa/tattoostudio-front>
 # Acesse a pasta do projeto no terminal/cmd
 $ cd tattoostudio-front
 
-# Vá para a pasta server
-$ cd server
-
 # Instale as dependências
 $ npm install
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
+# Execute a aplicação
+$ npm start
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
@@ -51,14 +48,13 @@ $ npm run dev:server
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [React](https://reactjs.org/)
-- [Axios](https://www.npmjs.com/package/axios)
+- [React-Hook-Form](https://react-hook-form.com/get-started)
+- [Styled-Components](https://styled-components.com/docs)
+- [React-Router-Dom](https://reactrouter.com/web/guides/quick-start)
+- [Moment](https://momentjs.com/)
 
 ---
-### Autoria
+### Visualização
 
-[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/cardosofvanessa/)](https://www.linkedin.com/in/cardosofvanessa/) 
-[![Gmail Badge](https://img.shields.io/badge/-Gmail-red?style=flat-square&logo=Gmail&logoColor=white&link=mailto:cardosovanessafs@gmail.com)](mailto:cardosovanessafs@gmail.com) 
-[![Instagram Badge](https://img.shields.io/badge/-Instagram-violet?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/vcardoso_/)](https://www.instagram.com/vcardoso_/)
-
-<p>Feito com ❤️ por Vanessa Cardoso!</p>
+<p>Aqui você pode checar o resultado final do projeto neste <a href="https://mafia-tattoo-studio.herokuapp.com/">Link</a></p>
 
