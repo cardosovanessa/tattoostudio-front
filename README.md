@@ -7,24 +7,24 @@
  <a href="#pré-requisitos">Pré-Requisitos</a> • 
  <a href="#rodando-o-back-end-servidor">Rodando Backend</a> • 
  <a href="#tecnologias">Tecnologias</a> •  
-  <a href="#autoria">Autoria</a>
+ <a href="#tecnologias">Descrição das Interfaces</a>
 </p>
 
-<h1 align="center">Tattoo Studio</h1>
+<h1 align="center">Máfia's Tattoo Studio</h1>
 
 ### Sobre
 
-Criação da View em React da API Tattoo Studio.
+Desenvolvimento da View em React e utilizando a API Tattoo Studio.
 
 ---
 ### Pré-requisitos 
 
-Antes de começar, você precisa ter instalado em sua máquina as seguintes ferramentas:
+Antes de começar, você precisa ter instalado em sua máqusina as seguintes ferramentas:
 
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
 ---
-### Rodando o projeto localmente (servidor) 
+### Rodando o Back End (servidor) 
 
 ```bash
 # Clone este repositório
@@ -45,130 +45,66 @@ $ npm start
 ---
 ### Tecnologias
 
-As seguintes ferramentas foram usadas na construção do projeto:
+As seguintes ferramentas foram utilizadas na construção do projeto:
 
 - [React](https://reactjs.org/)
-- [React-Hook-Form](https://react-hook-form.com/get-started)
-- [Styled-Components](https://styled-components.com/docs)
-- [React-Router-Dom](https://reactrouter.com/web/guides/quick-start)
+- [React Hook Form](https://react-hook-form.com/get-started)
+- [Styled Components](https://styled-components.com/docs)
+- [React Router Dom](https://reactrouter.com/web/guides/quick-start)
 - [Moment](https://momentjs.com/)
 
 ---
-### Visualização
+<h2 align="center">Descrição das interfaces</h2>
+<p align="center"><a href="https://mafia-tattoo-studio.herokuapp.com/">Clique aqui</a> para conferir o resultado final do projeto.</p>
 
-<p>Aqui você pode checar o resultado final do projeto neste <a href="https://mafia-tattoo-studio.herokuapp.com/">Link</a></p>
+___
+ 
+ <h3 align="center">Home</h3>
+
+*O usuário poderá encontrar as informações sobre a história do estúdio, contato e a localidade das filiais.*
+
+✅ Fluxo do usuário/ Case de sucesso 
+*Ao passar com o mouse sobre as imagens, aparecerão as informações sobre localidade e contato.*
+```
+Nome da unidade;
+Endereço;
+Telefone; 
+```
+___
+
+<h3 align="center">Cadastro</h3>
+
+*Nesta página é fornecida a opção de cadastro, caso o usuário tenha interesse em agendar um horário, deverá realizar o cadastro para que o estúdio possa entrar em contato e realizar o agendamento.*
+
+✅ Fluxo do usuário/ Case de sucesso 
+
+*Após o usuário preencher todos os campos requeridos e apertar o botão "enviar", o sistema efetuará o cadastro do usuário no banco de dados e o redirecionará para a página de confirmação, onde o usuário poderá rever os dados inseridos, atualizá-los caso necessário e/ ou deletar o cadastro caso mude de ideia. Se os dados estiverem corretos, poderá voltar para a página "Home" através do botão.*
+
+⚠️ Case de erro 
+
+*Se o formulário não for preenchido corretamente, retornará um erro de validação para que seja corrigido.*
 
 ---
-<h1 align="center">Descrição das interfaces</h1>
 
- <h2>Home</h2>
- 
- 
-### Descrição
+ <h3 align="center">Portfólio</h3>
 
-<p>Na home, o usuário poderá encontrar informações sobre o estúdio de tatuagem em questão como uma breve descrição da empresa e localização de suas filiais.</p>
+*O usuário poderá pesquisar temas de tattoos e conferir nossos projetos já realizados.*
 
-### Funcionalidade
+✅ Fluxo do usuário/ Case de sucesso
 
-<p>Informar o usuário informações sobre filiais, informações essas que são requisitadas de uma API externa.</p>
+*Além da barra de pesquisa, o usuário poderá clicar em cada "quadradinho" para visualizar algumas imagens do nosso portfólio com animações.*
 
-### Fluxo do Usuário
+---
 
-<p>Usuário passa a seta do seu mouse em cima da suposta foto do estúdio filial e lá mesmo é revelada as informações.</p>
+ <h3 align="center">Materiais</h3>
 
-### Caso de sucesso
+*Lugar ideal para obter informações sobre os materiais utilizados no estúdio, critérios e recomendações de segurança e higiene.*
 
-<p>Em cima da foto irá aparecer informações como:</p>
-<ul>
- <li>Nome da unidade</li>
- <li>Endereço</li>
- <li>Telefone</li>
-</ul>
+✅ Fluxo do usuário/ Case de sucesso 
 
-### Caso de erro
+*Ao passar com o mouse em cima das imagens dos materiais, retornará as informações sobre cada material específico.*
 
-<p>Não irá retornar nada.</p>
-
- <h2>Cadastro</h2>
- 
- 
-### Descrição
-
-<p>Essa página é onde o usuário expressa sua certeza de adquirir o serviço, fazendo seu cadastro para que o estúdio possa retornar o contato marcando um horário com o usuário/cliente.</p>
-
-### Funcionalidade
-
-<p>Efetuar o cadastro do usuário como um cliente no banco de dados.</p>
-
-### Fluxo do Usuário
-
-<p>Usuário preenche os campos requeridos e aperta no botão "enviar".</p>
-
-### Caso de sucesso
-
-<p>Sistema efetuará o cadastro do usuário no banco de dados e redirecionará para a página de confirmação, onde o usuário poderá rever as informações passadas, atualizá-las se alguma informação discrepante for percebida e/ou deletar o cadastro caso o usuário mude de idéia. Se tudo estiver certo, ele poderá voltar a página "Home" através de um botão. </p>
-
-### Caso de erro
-
-<p>O próprio formulário retornará o erro de validação.</p>
-
- <h2>Portfolio</h2>
- 
- 
-### Descrição
-
-<p>Nesta página o usuário poderá visualizar nossos trabalhos já finalizados.</p>
-
-### Funcionalidade
-
-<p>Exibir fotos de tatuagens feitas e filtra-las através de uma simples pesquisa. </p>
-
-### Fluxo do Usuário
-
-<p>Clicar em cada quadradinho para retornar a foto em questão e/ou pesquisar uma palavra chave.</p>
-
-### Caso de sucesso
-
-<p>As fotos em questão irão ser retornadas com uma animação maneira.</p>
-
-### Caso de erro
-
-<p>A animação irá funcionar porém foto nenhuma será retornada.</p>
-
- <h2>Materiais</h2>
- 
- 
-### Descrição
-
-<p>Aqui o usuário terá mais informações sobre os materiais utilizados no estúdio, protocolos e recomendações de segurança e higiene.</p>
-
-### Funcionalidade
-
-<p>Retornar informações sobre materiais utilizados em um estúdio de tatuagem.</p>
-
-### Fluxo do Usuário
-
-<p>Usuário passa o mouse em cima da imagem do material.</p>
-
-### Caso de sucesso
-
-<p>Irá retornar informações sobre o material.</p>
-
-### Caso de erro
-
-<p>As informações sobre o material não são retornadas.</p>
-
-<h2>Cores usadas na estilização</h2>
-
-<img src="https://scontent.fgru5-1.fna.fbcdn.net/v/t39.30808-6/241324285_4197525107033407_3114816645390422296_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeEKntCAJIoaFd9EWdjBjWvakbTOglTXwz2RtM6CVNfDPQRCpMXdEC8Nen2ABDQ_5dRh3E_gotHTCizixTiVjvWJ&_nc_ohc=xsoEEc2iIx8AX-pKcod&tn=c-bAmnl5qPyq6f-o&_nc_ht=scontent.fgru5-1.fna&oh=b8b99d9595202cdc41632c34dce2d4a0&oe=61358083"/>
-
-
-
-
-
-
-
-
-
-
+---
+ <h3 align="center">Autoria</h3>
+<p>Feito com ❤️ por Vanessa, Cinthia, Bárbara e Pedro.</p>
 
